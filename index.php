@@ -11,6 +11,32 @@
     <title>PHP Ajax Dischi</title>
 </head>
 <body>
-    
+    <!-- Prima Milestone: Stampiamo i dischi solo con l’utilizzo di PHP,
+    che stampa direttamente i dischi in pagina:
+    al caricamento della pagina ci saranno tutti i dischi. -->
+
+    <?php
+        include 'database.php';
+    ?>
+
+    <div class="header">
+        <img src="img/spotify-logo.png" alt="logo">
+    </div>
+
+    <div class="disc-container">
+        <?php   foreach($database as $disc){  ?>
+        
+            <div class="disc">
+                <img src="<?php echo $disc["poster"] ?>" alt="">
+                <h2> <?php echo $disc["title"]?> </h2>
+                <div class="text-bottom">
+                    <p> <?php echo $disc["author"]?> </p>
+                    <p> <?php echo $disc["year"]?> </p>
+                </div>
+            </div>  
+
+
+        <?php   }  ?>
+    </div>
 </body>
 </html>
