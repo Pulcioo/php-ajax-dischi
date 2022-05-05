@@ -32,7 +32,7 @@
         <?php   foreach($database as $disc){  ?>
         
             <div class="disc">
-                <img src="<?php echo $disc["poster"] ?>" alt="">
+                <img src="<?php echo $disc["poster"] ?>" alt="poster">
                 <h2> <?php echo $disc["title"]?> </h2>
                 <div class="text-bottom">
                     <p> <?php echo $disc["author"]?> </p>

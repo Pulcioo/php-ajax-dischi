@@ -17,9 +17,25 @@
 </head>
 
 <body>
-    <div id="vue-app"></div>
+    <div id="vue-app">
 
-    <script type="text/javascript" src="script.js"></script>
+        <div class="header">
+            <img src="img/spotify-logo.png" alt="logo">
+        </div>
+
+        <div class="disc-container">
+            <div v-for="(disc, index) in albums" :key="index" class="disc">
+                <img :src="disc.poster" alt="poster">
+                <h2>{{ disc.title }}</h2>
+                <div class="text-bottom">
+                    <p> {{ disc.author }} </p>
+                    <p> {{ disc.year }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
