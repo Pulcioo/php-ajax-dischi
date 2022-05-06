@@ -1,8 +1,9 @@
 <?php
 
-include(__DIR__ . '/database.php');
+    include(__DIR__ . '/database.php');
 
-header('Content-Type: application/json');
-echo json_encode($database);
+    header('Content-Type: application/json');
+    header('Access-Control-Allow-Origin: *');
+    echo json_encode($database);
 
 ?>
